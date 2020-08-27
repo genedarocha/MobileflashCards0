@@ -1,3 +1,17 @@
+/*
+
+File: TabOneScreen
+
+Desc: File to display the main front Screen
+Author: Gene Da Rocha
+
+Project3: Udacity Mobile Flash Cards Project 
+
+Date: 27th August 2020
+
+*/
+
+
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
 
@@ -7,8 +21,9 @@ import { Text, View } from '../components/Themed';
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
+      <Text style={styles.title}>Welcome To The Mobile Flash Cards App </Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <img src={require('../assets/images/splash.png') } width="350" height="350" />
       <EditScreenInfo path="/screens/TabOneScreen.tsx" />
     </View>
   );
