@@ -76,7 +76,7 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="TabTwoScreen"
         component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+        options={{ headerTitle: 'Create a Deck' }}
       />
     </TabTwoStack.Navigator>
   );
@@ -90,7 +90,7 @@ function TabTwoNavigator() {
         <TabThreeStack.Screen
           name="TabThreeScreen"
           component={TabThreeScreen}
-          options={{ headerTitle: 'Tab Three Title' }}
+          options={{ headerTitle: 'List of Decks' }}
         />
       </TabThreeStack.Navigator>
     );
