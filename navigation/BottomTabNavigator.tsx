@@ -7,7 +7,9 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import TabThreeScreenTab from '../screens/TabThreeScreen';
+import { BottomTabParamList, TabOneParamList,TabThreeParamList, TabTwoParamList} from '../types';
+import TabThreeScreen from '../screens/TabThreeScreen';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -19,7 +21,7 @@ export default function BottomTabNavigator() {
       initialRouteName="TabOne"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
       <BottomTab.Screen
-        name="Hit The New Deck"
+        name="TabOne"
         component={TabOneNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
@@ -32,6 +34,14 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
       />
+      <BottomTab.Screen
+        name="TabThree"
+        component={TabThreeNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+        }}
+      />
+
     </BottomTab.Navigator>
   );
 }
@@ -70,4 +80,18 @@ function TabTwoNavigator() {
       />
     </TabTwoStack.Navigator>
   );
-}
+  }
+
+  const TabThreeStack = createStackNavigator<TabThreeParamList>();
+
+  function TabThreeNavigator() {
+    return (
+      <TabThreeStack.Navigator>
+        <TabThreeStack.Screen
+          name="TabThreeScreen"
+          component={TabThreeScreen}
+          options={{ headerTitle: 'Tab Three Title' }}
+        />
+      </TabThreeStack.Navigator>
+    );
+    }
