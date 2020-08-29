@@ -74,7 +74,7 @@ function TabTwoNavigator() {
   return (
     <TabTwoStack.Navigator>
       <TabTwoStack.Screen
-        name="TabTwoScreen"
+        name="TabTwoScreenC"
         component={TabTwoScreen}
         options={{ headerTitle: 'Create a Deck' }}
       />
