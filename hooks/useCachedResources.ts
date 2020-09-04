@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import { Ionicons } from '@expo/vector-icons';
 import * as Font from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';

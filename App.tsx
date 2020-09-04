@@ -1,5 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import useCachedResources from './hooks/useCachedResources';
@@ -14,10 +17,12 @@ export default function App() {
     return null;
   } else {
     return (
+      <NavigationContainer>{
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />
         <StatusBar />
       </SafeAreaProvider>
+         }</NavigationContainer>
     );
   }
 }

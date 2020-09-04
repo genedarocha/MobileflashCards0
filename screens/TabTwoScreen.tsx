@@ -12,8 +12,7 @@ Date: August 31st  2020
 
 */
 
-
-
+import 'react-native-gesture-handler';
 import React, { Component } from 'react'
 import {  StyleSheet, TextInput,TouchableOpacity } from 'react-native'
 
